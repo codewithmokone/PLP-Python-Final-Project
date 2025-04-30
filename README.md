@@ -8,7 +8,7 @@ A simple Django-based weather application that fetches current weather data usin
 
 - Search for current weather by city name
 - Fetches data like temperature, humidity, pressure, weather description, and icon
-- Clean, responsive UI (using Bootstrap or your preferred frontend framework)
+- Clean, responsive UI (using Tailwind)
 - Graceful error handling for invalid city names or API issues
 
 ### Tech Stack
@@ -16,7 +16,7 @@ A simple Django-based weather application that fetches current weather data usin
 - Python 3.8+
 - Django 4.x
 - OpenWeatherMap API
-- HTML/CSS (Bootstrap optional)
+- HTML/CSS, Tailwind
 
 ### Setup Instructions
 
