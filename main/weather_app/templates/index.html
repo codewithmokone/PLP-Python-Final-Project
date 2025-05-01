@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+    <title>Weather App</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="w-full min-h-screen flex items-center justify-center">
+            <div class="w-lg min-h-120 bg-white/10 rounded-xl flex flex-col gap-30 ">
+                <!--------------------------------- Search ----------------------------->
+                <div class="py-4 mt-2">
+                    <form method="post" class="flex flex-row items-center justify-center gap-4">
+                        {% csrf_token %}
+                        <input type="text" name="city" id="city" class="w-80 p-3 border rounded-4xl text-base text-gray-400 placeholder:text-gray-400" placeholder=" Search Location...">
+                        <button type="submit" class="bg-sky-500 py-3  px-4 rounded-4xl text-white">search</button>
+                    </form>
+                </div>
+                <!--------------------------------- Location ----------------------------->
+                <div class="w-full h-38 flex flex-col items-center justify-center gap-2 text-white mb-8">
+                    {% if country_code and coordinate and temp and clouds and humidity %}
+                    <h1 class="text-4xl font-bold">{{name}}</h1>
+                    <p class="text-xl font-semibold">{{main}}</p>
+                    <img class="w-20 h-20" src="http://openweathermap.org/img/wn/{{ icon }}@4x.png" alt="weather_icon">
+                    <h2 class="text-8xl mb-4 font-bold">{{temp}}</h2>
+                    <ul class="flex justify-center gap-16 text-white text-xl font-semibold">
+                        <li class="flex flex-col items-center">
+                            <h4>Clouds</h4>
+                            <p>{{clouds}}</p>
+                        </li>
+                        <li class="flex flex-col items-center">
+                            <h4>Humidity</h4>
+                            <p>{{humidity}}</p>
+                        </li>
+                        <li class="flex flex-col items-center">
+                            <h4>Wind</h4>
+                            <p>{{wind}}kph</p>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- External Links -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>
