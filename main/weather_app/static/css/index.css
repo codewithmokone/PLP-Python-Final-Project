@@ -1,3 +1,6 @@
 body {
-    background-color: green;
+    background-image: url('/static/images/pexels-ahmadreza-pishnamazi-285173651-28514913.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
