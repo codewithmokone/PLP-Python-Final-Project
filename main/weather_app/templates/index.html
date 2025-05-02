@@ -23,23 +23,23 @@
                 </div>
                 <!--------------------------------- Location ----------------------------->
                 <div class="w-full h-38 flex flex-col items-center justify-center gap-2 text-white mb-8">
-                    {% if country_code and coordinate and temp and clouds and humidity %}
-                    <h1 class="text-4xl font-bold">{{name}}</h1>
-                    <p class="text-xl font-semibold">{{main}}</p>
-                    <img class="w-20 h-20" src="http://openweathermap.org/img/wn/{{ icon }}@4x.png" alt="weather_icon">
-                    <h2 class="text-8xl mb-4 font-bold">{{temp}}</h2>
+                    {% if data %}
+                    <h1 class="text-4xl font-bold">{{data.name}}</h1>
+                    <p class="text-xl font-semibold">{{data.main}}</p>
+                    <img class="w-20 h-20" src="http://openweathermap.org/img/wn/{{ data.icon }}@4x.png" alt="weather_icon">
+                    <h2 class="text-8xl mb-4 font-bold">{{data.temp}}</h2>
                     <ul class="flex justify-center gap-16 text-white text-xl font-semibold">
                         <li class="flex flex-col items-center">
                             <h4>Clouds</h4>
-                            <p>{{clouds}}</p>
+                            <p>{{data.clouds}}</p>
                         </li>
                         <li class="flex flex-col items-center">
                             <h4>Humidity</h4>
-                            <p>{{humidity}}</p>
+                            <p>{{data.humidity}}</p>
                         </li>
                         <li class="flex flex-col items-center">
                             <h4>Wind</h4>
-                            <p>{{wind}}kph</p>
+                            <p>{{data.wind}}kph</p>
                         </li>
                     </ul>
                     {% endif %}
