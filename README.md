@@ -9,7 +9,7 @@ A simple Django-based weather application that fetches current weather data usin
 - Search for current weather by city name
 - Fetches data like temperature, humidity, pressure, weather description, and icon
 - Clean, responsive UI (using Tailwind)
-- Graceful error handling for invalid city names or API issues
+- Graceful error handling API issues
 
 ### Tech Stack
 
@@ -22,5 +22,5 @@ A simple Django-based weather application that fetches current weather data usin
 
 #### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/django-weather-app.git
-cd django-weather-app
+git clone https://https://github.com/codewithmokone/PLP-Python-Final-Project
+cd main
